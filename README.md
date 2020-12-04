@@ -6,89 +6,20 @@ It's a RESTful API built with NodeJS + Express + MongoDB that receive all the da
 
 The main purpose of this API is stream audio files, podcasts were selected by me just to give some context to the app. So, you can reuse all this code to upload/stream a audio (just tested with .mp3) file and use inside your own context (music app, your own podcasts or whatever!).
 
-## About this Project
-
-This project is part of my personal portfolio, so, I'll be happy if you could provide me any feedback about the project, code, structure or anything that you can report that could make me a better developer!
-
-Email-me: stenio.wagner1@gmail.com
-
-Connect with me at [LinkedIn](https://www.linkedin.com/in/steniowagner/)
-
-Also, you can use this Project as you wish, be for study, be for make improvements or earn money with it!
-
-It's free!
-
-## Getting Started
-
 ### Prerequisites
 
-To run this project in the development mode, you'll need to have a basic environment with NodeJS 8+ installed. To use the database, you'll need to have MongoDB installed and running on your machine at the default port (27017).
+* MongoDB
+* Node 14+
 
-### Installing
+### Steps to run in Development environment
 
-**Cloning the Repository**
-
-```
-$ git clone https://github.com/steniowagner/mindcast-server
-
-$ cd mindcast-server
-```
-
-**Installing dependencies**
-
-```
-$ yarn
-```
-
-_or_
-
-```
-$ npm install
-```
-
-### Running the Development environment
-
-Now, you'll need to change to development branch:
-
-```
-$ git checkout development
-```
-
-With all dependencies installed, the Database running and the environment properly configured, you can now run the server:
-
-```
-$ yarn dev
-```
-
-_or_
-
-```
-$ npm run dev
-```
-
-### Running the Tests
-
-```
-$ yarn test
-```
-
-_or_
-
-```
-$ npm run test
-```
-
-### Running the Tests + Coverage
-
-```
-$ yarn test:coverage
-```
-
-_or_
-
-```
-$ npm run test:coverage
-```
+1. `yarn` --to install npm modules
+2. Update `DATABASE_URL` in `.env.development` 
+3. `yarn dev` --to start api locally
+4. `jest --runInBand -t 'some test description'` -- it will run tests with `some test description` in `it` description
+5. `yarn lint` --to show linting errors. Add [`--fix`] to auto fix errors.
+6. `yarn test` -- to run tests
+7. `yarn test:converage` -- to run tests & coverage
 
 ## Routes
 
