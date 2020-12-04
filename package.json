@@ -1,5 +1,5 @@
 {
-  "name": "mind-cast-server",
+  "name": "nepaltoday-podcast-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -24,17 +23,9 @@
       "git add"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/steniowagner/mindCast-server.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/steniowagner/mindCast-server/issues"
-  },
-  "homepage": "https://github.com/steniowagner/mindCast-server#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",

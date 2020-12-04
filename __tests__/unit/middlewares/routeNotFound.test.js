@@ -1,20 +1,20 @@
-const request = require('supertest');
+const request = require('supertest')
 
-const routeNotFound = require('../../../src/middlewares/routeNotFound');
-const app = require('../../../src/app');
+const routeNotFound = require('../../../src/middlewares/routeNotFound')
+const app = require('../../../src/app')
 
 describe('testing the route-not-found middleware', () => {
-  it('should call a next function passing an error as parameter', (done) => {
-    const next = jest.fn();
+	it('should call a next function passing an error as parameter', (done) => {
+		const next = jest.fn()
 
-    const error = new Error('Route Not Found');
+		const error = new Error('Route Not Found')
 
-    error.status = 404;
+		error.status = 404
 
-    routeNotFound(null, null, next);
+		routeNotFound(null, null, next)
 
-    expect(next).toHaveBeenCalledTimes(1);
+		expect(next).toHaveBeenCalledTimes(1)
 
-    done();
-  });
-});
+		done()
+	})
+})

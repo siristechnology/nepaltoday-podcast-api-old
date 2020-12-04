@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require('express')
 
-const HomeController = require('../controllers/HomeController');
+const HomeController = require('../controllers/HomeController')
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/', HomeController.read);
+router.get('/', HomeController.read)
 
-module.exports = router;
+module.exports = router

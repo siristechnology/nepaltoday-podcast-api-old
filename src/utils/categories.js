@@ -1,8 +1,1 @@
-module.exports = [
-  'science',
-  'technology',
-  'philosofy',
-  'business',
-  'pop-culture',
-  'history',
-];
+module.exports = ['science', 'technology', 'philosofy', 'business', 'pop-culture', 'history']

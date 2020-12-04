@@ -1,24 +1,24 @@
-const mongoose = require('mongoose');
-const faker = require('faker');
+const mongoose = require('mongoose')
+const faker = require('faker')
 
-const AuthorModel = require('../../../src/models/Author');
-const fakeAuthor = require('./fakeAuthor');
+const AuthorModel = require('../../../src/models/Author')
+const fakeAuthor = require('./fakeAuthor')
 
-const Author = mongoose.model('Author');
+const Author = mongoose.model('Author')
 
-const createSingleAuthor = () => Author.create(fakeAuthor);
+const createSingleAuthor = () => Author.create(fakeAuthor)
 
 const createMultipleAuthors = async (numberOfAuthors) => {
-  const authors = await Promise.all(
-    Array(numberOfAuthors)
-      .fill({})
-      .map(() => createSingleAuthor()),
-  );
+	const authors = await Promise.all(
+		Array(numberOfAuthors)
+			.fill({})
+			.map(() => createSingleAuthor()),
+	)
 
-  return authors;
-};
+	return authors
+}
 
 module.exports = {
-  createMultipleAuthors,
-  createSingleAuthor,
-};
+	createMultipleAuthors,
+	createSingleAuthor,
+}

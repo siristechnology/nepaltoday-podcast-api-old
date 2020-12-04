@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
-const { DATABASE_URL } = require('../config/environment');
+const mongoose = require('mongoose')
+const { DATABASE_URL } = require('../config/environment')
 
-mongoose.connect(DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(DATABASE_URL, { useNewUrlParser: true })
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 
-module.exports = mongoose;
+module.exports = mongoose
