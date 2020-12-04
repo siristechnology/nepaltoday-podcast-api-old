@@ -1,0 +1,38 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 14.11.0
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 14.11.0
+            
+            - name: yarn install
+              run: yarn install --frozen-lockfile
+              env:
+                  CI: true
+            
+            - name: yarn test:coverage
+              if: github.ref == 'refs/heads/master'
+              run: yarn test:coverage
+              env:
+                  CI: true
+            
+            - name: Upload Coverage to codecov
+              if: github.ref == 'refs/heads/master'
+              uses: codecov/codecov-action@v1.0.3
+              with:
+                  token: ${{secrets.CODECOV_TOKEN}}
+                  file: ./coverage/clover.xml
+            
+            - name: yarn test
+              if: github.ref != 'refs/heads/master'
+              run: yarn test
+              env:
+                  CI: true
