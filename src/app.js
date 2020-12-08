@@ -3,10 +3,24 @@ const express = require('express')
 const multer = require('multer')
 const path = require('path')
 
+const firebase = require('firebase/app')
+
 const app = express()
 
 const routeNotFound = require('./middlewares/routeNotFound')
 const errorHandler = require('./middlewares/errorHandler')
+
+const firebaseConfig = {
+	apiKey: "AIzaSyDBFabjvkxIQbTbLVxqQy6UyYrjqAK_NDs",
+    authDomain: "nepaltoday-podcast-beta.firebaseapp.com",
+    projectId: "nepaltoday-podcast-beta",
+    storageBucket: "nepaltoday-podcast-beta.appspot.com",
+    messagingSenderId: "63417643973",
+    appId: "1:63417643973:web:09443a094c2e67781511ac",
+    measurementId: "G-0EDJ5S6WNQ"
+}
+
+firebase.initializeApp(firebaseConfig);
 
 const getMulterDestPath = () => {
 	let rootTemp = `${__dirname}/temp`

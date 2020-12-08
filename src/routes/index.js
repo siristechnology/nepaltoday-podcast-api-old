@@ -12,5 +12,6 @@ router.use('/authors', require('./authors'))
 router.use('/podcasts', require('./podcasts'))
 router.use('/categories', require('./categories'))
 router.use('/home', require('./home'))
+router.use('/user', require('./user'))
 
 module.exports = router
