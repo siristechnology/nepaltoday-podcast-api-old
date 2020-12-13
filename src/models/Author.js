@@ -12,7 +12,8 @@ const AuthorSchema = new mongoose.Schema({
 	categories: [
 		{
 			type: String,
-			required: true,
+			// required: true,
+			default: []
 		},
 	],
 	name: {

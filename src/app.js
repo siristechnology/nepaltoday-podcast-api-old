@@ -10,6 +10,8 @@ const app = express()
 const routeNotFound = require('./middlewares/routeNotFound')
 const errorHandler = require('./middlewares/errorHandler')
 
+const startJobs = require('./jobs/jobRunner/start-jobs')
+
 const firebaseConfig = {
 	apiKey: "AIzaSyDBFabjvkxIQbTbLVxqQy6UyYrjqAK_NDs",
     authDomain: "nepaltoday-podcast-beta.firebaseapp.com",
@@ -50,5 +52,7 @@ app.use('/nepaltoday-podcast/api/v1', require('./routes'))
 app.use(routeNotFound)
 
 app.use(errorHandler)
+
+startJobs()
 
 module.exports = app
