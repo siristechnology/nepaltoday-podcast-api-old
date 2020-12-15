@@ -30,11 +30,11 @@ const AuthorSchema = new mongoose.Schema({
 	},
 	about: {
 		type: String,
-		required: true,
+		// required: true,
 	},
 })
 
-AuthorSchema.path('categories').validate((categories) => checkCategoriesValid(categories))
+// AuthorSchema.path('categories').validate((categories) => checkCategoriesValid(categories))
 
 AuthorSchema.set('toJSON', {
 	transform(doc, returned) {

@@ -1,8 +1,9 @@
 [
     {
         "name": "Player FM",
-        "sourceName": "Player FM",
-        "logoLink": "/assets/playerfm.png",
+        "sourceName" :"Player FM",
+        "profileImageURL": "/assets/playerfm.png",
+        "thumbnailProfileImageURL": "/assets/playerfm.png",
         "pages": [
             {
                 "url": "https://player.fm/podcasts/Nepali",

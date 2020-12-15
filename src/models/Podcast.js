@@ -3,9 +3,8 @@ const mongoose = require('../db')
 
 const PodcastSchema = mongoose.Schema({
 	author: {
-		type: mongoose.Schema.Types.ObjectId,
+		type: String,
 		required: true,
-		ref: 'Author',
 	},
 	title: {
 		type: String,
@@ -25,23 +24,40 @@ const PodcastSchema = mongoose.Schema({
 	},
 	category: {
 		type: String,
-		required: true,
+		// required: true,
 	},
 	stars: {
 		type: Number,
-		required: true,
+		// required: true,
 	},
 	duration: {
 		type: String,
-		required: true,
+		// required: true,
 	},
 	durationInSeconds: {
 		type: Number,
-		required: true,
+		// required: true,
 	},
 	fileName: {
 		type: String,
+		// required: true,
+	},
+	originalAudioLink: {
+		type: String,
 		required: true,
+		unique: true
+	},
+	link: {
+		type: String,
+		required: true
+	},
+	audioLink: {
+		type: String,
+		required: true
+	},
+	createdDate: { 
+		type: Date, 
+		default: Date.now 
 	},
 })
 
