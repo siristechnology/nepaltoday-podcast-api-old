@@ -18,15 +18,15 @@ exports.read = async () => {
 		const podcasts = (await Podcast.find()).flat()
 		const podcastList = podcasts.map(podcast=>{
 			const mySource = SourceConfig.find(x=> x.sourceName==podcast.author)
-			console.log(podcast)
+			// console.log(podcast)
 			let myPodcast = podcast
-			console.log(myPodcast)
+			// console.log(myPodcast)
 			myPodcast.author = {
 				name: mySource.sourceName,
 				profileImageURL: mySource.profileImageURL,
 				thumbnailProfileImageURL: mySource.thumbnailProfileImageURL
 			}
-			console.log(myPodcast.author)
+			// console.log(myPodcast.author)
 			return myPodcast
 		})
 		// console.log(podcastList)
