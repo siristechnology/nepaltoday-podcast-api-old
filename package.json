@@ -37,6 +37,7 @@
     "mp3-duration": "^1.1.0",
     "multer": "^1.4.1",
     "news-crawler": "https://github.com/siristechnology/news-crawler",
+    "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "uuid": "^8.3.2"
   },
