@@ -62,7 +62,7 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "nt-podcast-container"
+        "name": "nepaltoday-podcast-api"
       }
     ],
     "placementConstraints": [],
