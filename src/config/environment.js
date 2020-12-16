@@ -1,6 +1,6 @@
 require('dotenv').config({
-	// path: process.env.NODE_ENV === 'production' ? '.env' : `.env.${process.env.NODE_ENV}`,
-	path: process.env.NODE_ENV === 'production' ? '.env' : `.env.test`,
+	path: process.env.NODE_ENV === 'production' ? '.env' : `.env.${process.env.NODE_ENV}`,
+	// path: process.env.NODE_ENV === 'production' ? '.env' : `.env.test`,
 })
 
 const config = {
