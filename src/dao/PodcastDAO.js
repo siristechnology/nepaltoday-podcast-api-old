@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-// const PodcastModel = require('../models/Podcast')
+const PodcastModel = require('../models/Podcast')
 
 const Podcast = mongoose.model('Podcast')
 const SourceConfig = require('./../config/podcast-source-config.json')
