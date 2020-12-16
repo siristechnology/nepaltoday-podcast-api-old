@@ -47,6 +47,8 @@ app.use((req, res, next) => {
 	next()
 })
 
+app.use('/assets', express.static('assets'))
+
 app.use('/nepaltoday-podcast/api/v1', require('./routes'))
 
 app.use(routeNotFound)
