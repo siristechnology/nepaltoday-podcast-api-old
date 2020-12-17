@@ -1,3 +1,14 @@
+const loadAWSJSONSecretsIntoENV = require('aws-secrets-environment')
+const region = 'us-east-1'
+
+const loadEnvFromAws = async () => {
+	try {
+		await loadAWSJSONSecretsIntoENV(region, 'beta/nepaltoday-podcast-api-secrets', console.log)
+	} catch {}
+}
+
+loadEnvFromAws()
+
 require('dotenv').config({
 	path: process.env.NODE_ENV === 'production' ? '.env' : `.env.${process.env.NODE_ENV}`,
 	// path: process.env.NODE_ENV === 'production' ? '.env' : `.env.test`,
