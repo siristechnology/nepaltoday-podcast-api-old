@@ -74,5 +74,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: nepaltoday-podcast-beta-api
-        cluster: default
+        cluster: Default
         wait-for-service-stability: true
