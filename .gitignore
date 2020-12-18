@@ -64,7 +64,6 @@ typings/
 
 # dotenv environment variables file
 .env
-
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -81,6 +80,3 @@ typings/
 
 # Serverless directories
 .serverless
-
-
-# End of https://www.gitignore.io/api/node

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node ./src/bin",
-    "dev": "cross-env NODE_ENV=development nodemon ./src/bin/index.js --ignore __tests__",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/bin --ignore __tests__",
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage --detectOpenHandles",
     "test:coveralls": "cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls",
@@ -27,8 +27,7 @@
   "license": "ISC",
   "dependencies": {
     "agenda": "^3.1.0",
-    "aws-sdk": "^2.808.0",
-    "aws-secrets-environment": "^1.0.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",

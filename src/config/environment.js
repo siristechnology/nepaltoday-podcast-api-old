@@ -1,4 +1,4 @@
-const loadAWSJSONSecretsIntoENV = require('aws-secrets-environment')
+const loadAWSJSONSecretsIntoENV = require('./aws-secrets-environment')
 const region = 'us-east-1'
 
 module.exports = async function() {
