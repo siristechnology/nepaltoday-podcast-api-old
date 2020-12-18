@@ -17,7 +17,7 @@
       "entryPoint": null,
       "portMappings": [
         {
-          "hostPort": 3001,
+          "hostPort": 80,
           "protocol": "tcp",
           "containerPort": 3001
         }
@@ -94,8 +94,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:148015068777:task-definition/nt-podcast-task:19",
-  "family": "nt-podcast-task",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:148015068777:task-definition/nt-podcast-task",
+  "family": "service:nepaltoday-podcast-beta-api",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -158,7 +158,6 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "256",
-  "revision": 19,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
