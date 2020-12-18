@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const fs = require('fs')
 
 const persistFileGridFS = require('../../src/utils/persistFileGridFS')
-const { DATABASE_URL } = require('../../src/config/environment')
 const clearDatabase = require('../helpers/clearDatabase')
 
 describe('Testing persistFileGridFS', () => {
@@ -12,7 +11,7 @@ describe('Testing persistFileGridFS', () => {
 	const filePath = `${tempDir}/test.mp3`
 
 	beforeAll(async (done) => {
-		await mongoose.connect(DATABASE_URL)
+		await mongoose.connect(process.env.DATABASE_URL)
 		done()
 	})
 

@@ -2,30 +2,35 @@ const cluster = require('cluster')
 const { cpus } = require('os')
 
 const serverListeners = require('./server-listeners')
-const environment = require('../config/environment')
-const app = require('../app')
+const loadEnvironment = require('../config/environment')
 
-const { onListening, onError } = serverListeners
-const { PORT } = environment
+console.log('printing loadEnvironment', loadEnvironment())
 
-const server = app.listen(PORT)
+loadEnvironment().then((environment) => {
+	const app = require('../app')
 
-server.on('listening', () => onListening(server))
+	const { onListening, onError } = serverListeners
+	const { PORT } = environment
 
-server.on('error', (err) => onError(err, PORT))
+	const server = app.listen(PORT)
 
-// const numCPUs = cpus().length;
+	server.on('listening', () => onListening(server))
 
-// if (cluster.isMaster) {
-//   for (let i = 0; i < numCPUs; i++) {
-//     cluster.fork();
-//   }
-// } else {
-//   const { onListening, onError } = serverListeners;
-//   const { PORT } = environment;
-//   const server = app.listen(PORT);
+	server.on('error', (err) => onError(err, PORT))
 
-//   server.on('listening', () => onListening(server));
+	// const numCPUs = cpus().length;
 
-//   server.on('error', err => onError(err, PORT));
-// }
+	// if (cluster.isMaster) {
+	//   for (let i = 0; i < numCPUs; i++) {
+	//     cluster.fork();
+	//   }
+	// } else {
+	//   const { onListening, onError } = serverListeners;
+	//   const { PORT } = environment;
+	//   const server = app.listen(PORT);
+
+	//   server.on('listening', () => onListening(server));
+
+	//   server.on('error', err => onError(err, PORT));
+	// }
+})
