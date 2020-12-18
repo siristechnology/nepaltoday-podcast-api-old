@@ -90,7 +90,6 @@
   "placementConstraints": [],
   "memory": "512",
   "taskRoleArn": "arn:aws:iam::148015068777:role/ecsTaskExecutionRole",
-  "family": "service:nepaltoday-podcast-beta-api",
   "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
