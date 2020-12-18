@@ -67,7 +67,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "148015068777.dkr.ecr.us-east-1.amazonaws.com/siris-repo:185580de27ede839d7615679dc0cf37097d9f273",
+      "image": "148015068777.dkr.ecr.us-east-1.amazonaws.com/nt-podcast-image-repo:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -94,7 +94,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:148015068777:task-definition/nt-podcast-task:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:148015068777:task-definition/nt-podcast-task:8",
   "family": "nt-podcast-task",
   "requiresAttributes": [
     {
@@ -158,7 +158,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "256",
-  "revision": 3,
+  "revision": 8,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
