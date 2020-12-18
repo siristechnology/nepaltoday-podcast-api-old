@@ -4,8 +4,6 @@ const { cpus } = require('os')
 const serverListeners = require('./server-listeners')
 const loadEnvironment = require('../config/environment')
 
-console.log('printing loadEnvironment', loadEnvironment())
-
 loadEnvironment().then((environment) => {
 	const app = require('../app')
 

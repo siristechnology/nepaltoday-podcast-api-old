@@ -2,12 +2,12 @@ const loadAWSJSONSecretsIntoENV = require('aws-secrets-environment')
 const region = 'us-east-1'
 
 module.exports = async function() {
-	await loadAWSJSONSecretsIntoENV(region, 'beta/nepaltoday-podcast-api-secrets', console.log)
-
 	require('dotenv').config({
 		path: process.env.NODE_ENV === 'production' ? '.env' : `.env.${process.env.NODE_ENV}`,
 		// path: process.env.NODE_ENV === 'production' ? '.env' : `.env.test`,
 	})
+
+	await loadAWSJSONSecretsIntoENV(region, 'beta/nepaltoday-podcast-api-secrets', console.log)
 
 	const config = {
 		DATABASE_URL: process.env.DATABASE_URL,
