@@ -90,6 +90,7 @@
   "placementConstraints": [],
   "memory": "512",
   "taskRoleArn": "arn:aws:iam::148015068777:role/ecsTaskExecutionRole",
+  "family": "nt-podcast-task",
   "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
