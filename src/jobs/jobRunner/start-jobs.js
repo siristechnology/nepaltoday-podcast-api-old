@@ -13,5 +13,5 @@ module.exports = async function () {
 
     await agenda.start()
 
-    await agenda.every('20 hours', 'crawl podcasts')
+    await agenda.every('5 hours', 'crawl podcasts')
 }
