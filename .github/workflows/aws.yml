@@ -73,6 +73,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: nepaltoday-podcast-beta-api
-        cluster: Default
+        service: nt-podcast-qa-api
+        cluster: nt-podcast-cluster
         wait-for-service-stability: true
