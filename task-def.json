@@ -1,20 +1,16 @@
 {
-  "ipcMode": null,
   "executionRoleArn": "arn:aws:iam::148015068777:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "dnsSearchDomains": null,
-      "environmentFiles": null,
+      "name": "nt-podcast-container",
       "logConfiguration": {
         "logDriver": "awslogs",
-        "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/nt-podcast-task",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "entryPoint": null,
       "portMappings": [
         {
           "hostPort": 3001,
@@ -22,20 +18,12 @@
           "containerPort": 3001
         }
       ],
-      "command": null,
-      "linuxParameters": null,
-      "cpu": 0,
       "environment": [
         {
           "name": "NODE_ENV",
           "value": "production"
         }
       ],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
-      "mountPoints": [],
-      "workingDirectory": null,
       "secrets": [
         {
           "valueFrom": "arn:aws:secretsmanager:us-east-1:148015068777:secret:beta/nepaltoday-podcast-api-secrets-wUiak3:AWS_ACCESS_KEY_ID::",
@@ -62,42 +50,15 @@
           "name": "SERVER_BASE_URL"
         }
       ],
-      "dockerSecurityOptions": null,
-      "memory": null,
-      "memoryReservation": null,
-      "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "148015068777.dkr.ecr.us-east-1.amazonaws.com/nt-podcast-image-repo:latest",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
-      "essential": true,
-      "links": null,
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": null,
-      "systemControls": null,
-      "privileged": null,
-      "name": "nt-podcast-container"
+      "image": "148015068777.dkr.ecr.us-east-1.amazonaws.com/nt-podcast-image-repo:latest"
     }
   ],
-  "placementConstraints": [],
   "memory": "512",
   "taskRoleArn": "arn:aws:iam::148015068777:role/ecsTaskExecutionRole",
   "family": "nt-podcast-task",
-  "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "cpu": "256",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
-  "volumes": []
+  "cpu": "256"
 }
