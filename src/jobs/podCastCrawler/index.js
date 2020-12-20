@@ -11,11 +11,15 @@ module.exports = async function () {
         for(const podcast of podcasts){
             const podcastSaved = await checkPodcast(podcast.audioUrl)
             if(!podcastSaved){
-                const s3Response = await uploadHelper(podcast)
-                if(s3Response.success){
-                    const duration = await getPodcastDuration(podcast.audioUrl)
-                    console.log(duration)
-                    await savePodcasttoDatabase(podcast, s3Response.response, duration)
+                try{
+                    const s3Response = await uploadHelper(podcast)
+                    if(s3Response.success){
+                        const duration = await getPodcastDuration(podcast.audioUrl)
+                        await savePodcasttoDatabase(podcast, s3Response.response, duration)
+                        console.log("podcast saved")
+                    }
+                } catch(err){
+                    console.log("Error saving", err)
                 }
             }
         }
