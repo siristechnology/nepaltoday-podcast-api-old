@@ -18,5 +18,50 @@
             "content": [],
             "audio-url": "div.main-content.episodes > div > div > div.main-buttons > div.episode.paused > a"
         }
+    },   
+    {
+        "name": "Ujyalo",
+        "sourceName": "Ujyalo",
+        "profileImageURL": "/assets/ujyalo.png",
+        "thumbnailProfileImageURL": "/assets/ujyalo.png",
+        "pages": [
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/sikdai-sikaudai",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/Hamro-Khagol",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/desh-paradesh-radio-program",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "section > div > div > div > div > div > h3",
+            "excerpt": "section > div > div > div > div.blog-details > h1",
+            "lead-image": "section > div > div > div > div > div > img",
+            "content": [],
+            "audio-url": "#jp_audio_0"
+        }
     }
 ]
