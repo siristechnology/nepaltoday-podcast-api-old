@@ -61,7 +61,7 @@
             "excerpt": "section > div > div > div > div.blog-details > h1",
             "lead-image": "section > div > div > div > div > div > img",
             "content": [],
-            "audio-url": "#jp_audio_0"
+            "audio-url": "div > div.jp-details > a"
         }
     }
 ]
