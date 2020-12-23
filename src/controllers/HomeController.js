@@ -11,7 +11,11 @@ exports.read = async (req, res, next) => {
 		}
 
 		if (categories === 'all') {
-			const podcasts = await PodcastDAO.read()
+			let podcasts = await PodcastDAO.read()
+			podcasts.map(podcast=>{
+				podcast.id = podcast._id
+				return podcast
+			})
 			const authors = await AuthorDAO.read()
 
 			return res.status(200).send({
