@@ -27,7 +27,7 @@
         "pages": [
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/sikdai-sikaudai",
-                "category": "social",
+                "category": "education",
                 "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
             },
             {
@@ -37,22 +37,32 @@
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
-                "category": "social",
+                "category": "business",
                 "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
             },
             {
-                "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
-                "category": "social",
+                "url": "https://ujyaaloonline.com/radio-program-detail/Corona-capsule",
+                "category": "health",
                 "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
             },
             {
-                "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
-                "category": "social",
+                "url": "https://ujyaaloonline.com/radio-program-detail/kayakairan",
+                "category": "news",
                 "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/desh-paradesh-radio-program",
                 "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/sadak-ra-sawari",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "url": "https://ujyaaloonline.com/radio-program-detail/azar-amar-geet",
+                "category": "song",
                 "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
             }
         ],
