@@ -7,7 +7,7 @@ const getPodcastDuration = require('./getPodcastDuration')
 module.exports = async function () {
 
     try {
-        let podcasts = await PodcastCrawler(SourceConfig, {headless: true, articleUrlLength: 1})
+        let podcasts = await PodcastCrawler(SourceConfig, {headless: true, articleUrlLength: 3})
         podcasts = podcasts.filter(x=>x.imageLink.length>5)
         podcasts = podcasts.filter(x=>x.audioUrl.length>5)
         for(const podcast of podcasts){
