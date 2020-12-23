@@ -13,13 +13,13 @@ const errorHandler = require('./middlewares/errorHandler')
 const startJobs = require('./jobs/jobRunner/start-jobs')
 
 const firebaseConfig = {
-	apiKey: "AIzaSyDBFabjvkxIQbTbLVxqQy6UyYrjqAK_NDs",
-    authDomain: "nepaltoday-podcast-beta.firebaseapp.com",
-    projectId: "nepaltoday-podcast-beta",
-    storageBucket: "nepaltoday-podcast-beta.appspot.com",
-    messagingSenderId: "63417643973",
-    appId: "1:63417643973:web:09443a094c2e67781511ac",
-    measurementId: "G-0EDJ5S6WNQ"
+	apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID
 }
 
 firebase.initializeApp(firebaseConfig);
