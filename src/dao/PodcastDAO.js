@@ -15,7 +15,7 @@ exports.create = async (data) => {
 
 exports.read = async () => {
 	try {
-		const podcasts = await Podcast.find()
+		const podcasts = await Podcast.find().sort({ _id: -1}).limit(30)
 		let podcastList = podcasts.map(podcast=>{
 			const mySource = SourceConfig.find(x=> x.sourceName==podcast.author)
 			let author = {
@@ -23,7 +23,8 @@ exports.read = async () => {
 				profileImageURL: process.env.SERVER_BASE_URL + mySource.profileImageURL,
 				thumbnailProfileImageURL: process.env.SERVER_BASE_URL + mySource.thumbnailProfileImageURL
 			}
-			return {...podcast._doc, author }
+			let id = podcast._id;
+			return {...podcast._doc, author, id }
 		})
 		return podcastList
 	} catch (err) {
