@@ -6,6 +6,10 @@ const PodcastSchema = mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	program: {
+		type: String,
+		required: true
+	},
 	title: {
 		type: String,
 		required: true,

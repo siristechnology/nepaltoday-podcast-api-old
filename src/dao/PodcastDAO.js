@@ -68,3 +68,22 @@ exports.checkPodcastByOriginalLink = async (originalAudioLink) => {
 		throw err
 	}
 }
+
+exports.filterByProgram = async (program) => {
+	try{
+		const podcasts = await Podcast.find({program}).sort({_id: -1}).limit(30)
+		let podcastList = podcasts.map(podcast=>{
+			const mySource = SourceConfig.find(x=> x.sourceName==podcast.author)
+			let author = {
+				name: mySource.sourceName,
+				profileImageURL: process.env.SERVER_BASE_URL + mySource.profileImageURL,
+				thumbnailProfileImageURL: process.env.SERVER_BASE_URL + mySource.thumbnailProfileImageURL
+			}
+			let id = podcast._id;
+			return {...podcast._doc, author, id }
+		})
+		return podcastList
+	} catch(err){
+		throw err
+	}
+}

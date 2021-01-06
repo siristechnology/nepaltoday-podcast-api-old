@@ -6,9 +6,28 @@
         "thumbnailProfileImageURL": "/assets/playerfm.png",
         "pages": [
             {
-                "url": "https://player.fm/podcasts/Nepali",
+                "url": "https://player.fm/series/hamro-awaz",
                 "category": "social",
-                "link-selector": "main > div > article > div.headline > a"
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a",
+                "program": "Hamro Awaz"
+            },
+            {
+                "url": "https://player.fm/series/boju-bajai",
+                "category": "social",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a",
+                "program": "Boju Bajai"
+            },
+            {
+                "url": "https://player.fm/series/awr-nepali-nepalese-sabbath-school",
+                "category": "knowledge",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a",
+                "program": "AWR Nepali / Nepalese / नेपाली (Sabbath School)"
+            },
+            {
+                "url": "https://player.fm/series/random-nepali-podcast",
+                "category": "entertainment",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a",
+                "program": "Random Nepali Podcast"
             }
         ],
         "article-detail-selectors": {
@@ -18,7 +37,7 @@
             "content": [],
             "audio-url": "div.main-content.episodes > div > div > div.main-buttons > div.episode.paused > a"
         }
-    },   
+    },
     {
         "name": "Ujyalo",
         "sourceName": "Ujyalo",
@@ -28,42 +47,50 @@
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/sikdai-sikaudai",
                 "category": "education",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "सिक्दै सिकाउँदै"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/Hamro-Khagol",
                 "category": "social",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "हाम्रो खगोल"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
                 "category": "business",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "व्यवसायका लागि बैंक"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/Corona-capsule",
                 "category": "health",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "कोरोना क्याप्सुल"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/kayakairan",
                 "category": "news",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "कायाकैरन"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/desh-paradesh-radio-program",
                 "category": "social",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "देश परदेश (अडियाे)"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/sadak-ra-sawari",
                 "category": "social",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "सडक र सवारी"
             },
             {
                 "url": "https://ujyaaloonline.com/radio-program-detail/azar-amar-geet",
                 "category": "song",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a",
+                "program": "अजर अमर गीतहरु"
             }
         ],
         "article-detail-selectors": {

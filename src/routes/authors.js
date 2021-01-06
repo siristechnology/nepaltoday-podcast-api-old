@@ -9,14 +9,16 @@ const AuthorController = require('../controllers/AuthorController')
 const router = express.Router()
 
 // CRUD user routes
-router.get('/filter', AuthorController.filterByName)
-router.get('/:id', AuthorController.readById)
-router.get('/', AuthorController.read)
-router.post('/', AuthorController.create)
-router.patch('/:id', AuthorController.update)
-router.delete('/:id', AuthorController.delete)
+// router.get('/filter', AuthorController.filterByName)
+// router.get('/:id', AuthorController.readById)
+// router.get('/', AuthorController.read)
+// router.post('/', AuthorController.create)
+// router.patch('/:id', AuthorController.update)
+// router.delete('/:id', AuthorController.delete)
 
 // PODCAST routes
-router.post('/:id/podcasts', setMetadataPodcastUploaded, getPodcastDurationInSeconds, getPodcastDuration, PodcastController.create)
+// router.post('/:id/podcasts', setMetadataPodcastUploaded, getPodcastDurationInSeconds, getPodcastDuration, PodcastController.create)
+
+router.get('/:program', AuthorController.filterByProgram)
 
 module.exports = router

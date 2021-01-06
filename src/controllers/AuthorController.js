@@ -1,6 +1,36 @@
 const handleControllerError = require('../utils/handleControllerError')
 const shuffleArray = require('../utils/shuffleArray')
 const AuthorDAO = require('../dao/AuthorDAO')
+const PodcastDAO = require('../dao/PodcastDAO')
+const PodcastSource = require('./../config/podcast-source-config.json')
+
+exports.filterByProgram = async (req,res, next) => {
+	try{
+		const { program } = req.params;
+		const author = PodcastSource.find(x=>{
+			let checkSource = x.pages.filter(x=>x.program==program)
+			if(checkSource.length) return true
+		})
+		const podcasts = await PodcastDAO.filterByProgram(program)
+		
+		if (!author) {
+			return res.status(404).send({
+				message: 'Author not found',
+			})
+		}
+		
+		const result = {
+			name: author.name,
+			profileImageURL: author.profileImageURL,
+			thumbnailProfileImageURL: author.thumbnailProfileImageURL,
+			podcasts
+		}
+
+		return res.status(200).send({ author: result })
+	} catch (err) {
+		next(err)
+	}
+}
 
 exports.create = async (req, res, next) => {
 	try {
