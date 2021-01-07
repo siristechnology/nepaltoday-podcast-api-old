@@ -47,7 +47,8 @@ const savePodcasttoDatabase = async (podcast, s3Response, duration) => {
         audioLink: s3Response.Location,
         duration: duration.duration,
         durationInSeconds: duration.durationInSeconds,
-        category: podcast.category
+        category: podcast.category,
+        program: podcast.program
     }
 
     await create(podcastObj)

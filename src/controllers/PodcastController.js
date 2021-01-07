@@ -7,6 +7,23 @@ const { connection, mongo } = require('../db')
 const PodcastDAO = require('../dao/PodcastDAO')
 const AuthorDAO = require('../dao/AuthorDAO')
 
+exports.readByProgram = async (req, res, next) => {
+	try{
+		const { program } = req.params
+
+		const podcast = await PodcastDAO.filterByProgram(program)
+
+		if (!podcast) {
+			return res.status(404).send({ message: 'Podcast not found.' })
+		}
+
+		return res.status(200).send({ podcast })
+
+	} catch (err) {
+		next(err)
+	}
+}
+
 exports.listen = async (req, res, next) => {
 	try {
 		const gfs = GridFs(connection.db, mongo)
