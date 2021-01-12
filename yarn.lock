@@ -5057,10 +5057,9 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
-news-crawler@^1.12.3:
+"news-crawler@https://github.com/siristechnology/news-crawler":
   version "1.12.3"
-  resolved "https://registry.yarnpkg.com/news-crawler/-/news-crawler-1.12.3.tgz#ff3de752090806693fff7724fb2461e03cf9601d"
-  integrity sha512-aAzMLSk16U0pprNEjZZxPH4ai8yvJNQ1Ge9Pp/Oa/gitCL/9lm+MYm8m8frvljCosbYH+09oOcpzIpzrrAObQw==
+  resolved "https://github.com/siristechnology/news-crawler#077adc4da957a4d935c930f654098b34103e7fe5"
   dependencies:
     html-to-text "^5.1.1"
     puppeteer "5.3.0"
