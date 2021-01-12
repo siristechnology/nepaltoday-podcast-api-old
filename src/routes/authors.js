@@ -9,7 +9,7 @@ const AuthorController = require('../controllers/AuthorController')
 const router = express.Router()
 
 // CRUD user routes
-// router.get('/filter', AuthorController.filterByName)
+router.get('/programs/search/:name', AuthorController.searchByProgram)
 // router.get('/:id', AuthorController.readById)
 // router.get('/', AuthorController.read)
 // router.post('/', AuthorController.create)

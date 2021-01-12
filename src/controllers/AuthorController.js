@@ -3,6 +3,7 @@ const shuffleArray = require('../utils/shuffleArray')
 const AuthorDAO = require('../dao/AuthorDAO')
 const PodcastDAO = require('../dao/PodcastDAO')
 const PodcastSource = require('./../config/podcast-source-config.json')
+const Podcast = require('../models/Podcast')
 
 exports.filterByProgram = async (req,res, next) => {
 	try{
@@ -31,6 +32,30 @@ exports.filterByProgram = async (req,res, next) => {
 		next(err)
 	}
 }
+
+exports.searchByProgram = async (req, res, next) => {
+	try {
+		const { name } = req.params;
+		let programs = []
+		for(const x of PodcastSource){
+			let pages = x.pages.filter(y=>(new RegExp(name, "i")).test(y.programInEnglish))
+			for(const page of pages){
+				const podcastNumber = await Podcast.count({author: x.sourceName, program: page.program})
+				podcastNumber>0 && programs.push({
+					name: x.sourceName,
+					program: page.program,
+					podcastNumber,
+					profileImageURL: process.env.SERVER_BASE_URL + x.profileImageURL 
+				})
+			}
+		}
+		programs = programs.slice(0, 30)
+
+		return res.status(200).send({programs})
+	} catch (err) {
+		next(err)
+	}
+} 
 
 exports.create = async (req, res, next) => {
 	try {
