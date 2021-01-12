@@ -10,6 +10,10 @@ const PodcastSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
+	programInEnglish: {
+		type: String,
+		required: true
+	},
 	title: {
 		type: String,
 		required: true,

@@ -48,7 +48,8 @@ const savePodcasttoDatabase = async (podcast, s3Response, duration) => {
         duration: duration.duration,
         durationInSeconds: duration.durationInSeconds,
         category: podcast.category,
-        program: podcast.program
+        program: podcast.program,
+        programInEnglish: podcast.programInEnglish
     }
 
     await create(podcastObj)
