@@ -23,7 +23,7 @@
                 "url": "https://player.fm/series/awr-nepali-nepalese-sabbath-school",
                 "category": "knowledge",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a",
-                "program": "AWR Nepali / Nepalese / नेपाली (Sabbath School)",
+                "program": "AWR Nepali:Nepalese:नेपाली(Sabbath School)",
                 "programInEnglish": "AWR Nepali"
             },
             {
