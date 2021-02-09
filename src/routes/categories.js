@@ -4,6 +4,6 @@ const CategoryController = require('../controllers/CategoryController')
 
 const router = express.Router()
 
-router.get('/:category', CategoryController.read)
+router.get('/', CategoryController.read)
 
 module.exports = router

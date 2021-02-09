@@ -1,28 +1,27 @@
-const shuffleArray = require('../utils/shuffleArray')
-const PodcastDAO = require('../dao/PodcastDAO')
-const AuthorDAO = require('../dao/AuthorDAO')
-const categories = require('../utils/categories')
+const SourceConfig = require('./../config/podcast-source-config.json');
+const { categories } = require('./../config/categories');
 
 exports.read = async (req, res, next) => {
 	try {
-		const { category } = req.params
-
-		const isValidCategory = categories.some((item) => item === category)
-
-		if (!isValidCategory) {
-			return res.status(400).send({
-				message: `Category must be one of: ${categories.toString()}.`,
+		let programCategories = [];
+		categories.forEach(category=>{
+			let programs =  [];
+			SourceConfig.forEach(source=>{
+				const myPages = source.pages.filter(x=>x.category==category);
+				const myPrograms = myPages.map(x=>{return{
+					programName: x.program,
+					category: x.category,
+					sourceName: source.sourceName,
+					profileImageURL: process.env.SERVER_BASE_URL + source.profileImageURL
+				}})
+				programs = programs.concat(myPrograms)
 			})
-		}
-
-		const authors = await AuthorDAO.filterByCategory([category])
-		const podcasts = await PodcastDAO.readByCategory(category)
-
-		return res.status(200).send({
-			authors,
-			featured: shuffleArray(podcasts).slice(0, 15),
-			trending: shuffleArray(podcasts).slice(0, 15),
+			programCategories.push({
+				category,
+				programs
+			})
 		})
+		return res.status(200).send({programs: programCategories})
 	} catch (err) {
 		next(err)
 	}
