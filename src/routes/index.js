@@ -11,6 +11,7 @@ router.get('/', (req, res) =>
 router.use('/authors', require('./authors'))
 router.use('/podcasts', require('./podcasts'))
 router.use('/categories', require('./categories'))
+router.use('/programs', require('./programs'))
 router.use('/home', require('./home'))
 router.use('/user', require('./user'))
 
