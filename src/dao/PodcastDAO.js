@@ -4,6 +4,7 @@ const PodcastModel = require('../models/Podcast')
 
 const Podcast = mongoose.model('Podcast')
 const SourceConfig = require('./../config/podcast-source-config.json')
+
 exports.create = async (data) => {
 	try {
 		const podcast = new Podcast(data)
@@ -34,7 +35,7 @@ exports.read = async () => {
 
 exports.readById = async (id) => {
 	try {
-		return await Podcast.findById(id).populate('author')
+		return await Podcast.findById(id)
 	} catch (err) {
 		throw err
 	}
@@ -42,7 +43,7 @@ exports.readById = async (id) => {
 
 exports.readByCategory = async (category) => {
 	try {
-		return await Podcast.find({ category }).populate('author')
+		return await Podcast.find({ category })
 	} catch (err) {
 		throw err
 	}
@@ -50,7 +51,7 @@ exports.readByCategory = async (category) => {
 
 exports.filterByCategory = async (categories) => {
 	try {
-		return await Podcast.find({ category: { $in: categories } }).populate('author')
+		return await Podcast.find({ category: { $in: categories } })
 	} catch (err) {
 		throw err
 	}
