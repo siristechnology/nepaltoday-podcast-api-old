@@ -1,5 +1,3 @@
-# Created by https://www.gitignore.io/api/node
-
 ### Node ###
 # Logs
 logs
@@ -7,6 +5,9 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Jest
+__tests__/*.mp3
 
 # Runtime data
 pids
@@ -44,8 +45,6 @@ jspm_packages/
 __tests__/temp/
 src/temp/
 
-# TypeScript v1 declaration files
-typings/
 
 # Optional npm cache directory
 .npm
@@ -63,20 +62,9 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.test
+.env*
+!.env.sample
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless

@@ -14,12 +14,12 @@ The main purpose of this API is stream audio files, podcasts were selected by me
 ### Steps to run in Development environment
 
 1. `yarn` --to install npm modules
-2. Update `DATABASE_URL` in `.env.development` 
+2. Make a copy of `.env.sample` and rename it to `.env.development` for dev mode or `.env` for prod mode. Update env variables in those files 
 3. `yarn dev` --to start api locally
 4. `jest --runInBand -t 'some test description'` -- it will run tests with `some test description` in `it` description
 5. `yarn lint` --to show linting errors. Add [`--fix`] to auto fix errors.
 6. `yarn test` -- to run tests
-7. `yarn test:converage` -- to run tests & coverage
+7. `yarn test:coverage` -- to run tests & coverage
 
 ## Routes
 
